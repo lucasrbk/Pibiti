@@ -19,11 +19,4 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=250)),
             ],
         ),
-        migrations.CreateModel(
-            name='Archive',
-            fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('file', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Files.File')),
-            ],
-        ),
     ]
