@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arquivos</title>
+</head>
+<body>
+    {% if all_files %}
+    <h1>Arquivos :</h1>
+    <ul>
+        {% for file in all_files %}
+        <li><a href="/file/{{file.type}}/">{{file.name}}</a> </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+            <h2>No files to show</h2>
+    {% endif %}
+</body>
+</html>
