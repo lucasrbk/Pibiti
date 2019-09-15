@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'files/style.css' %}" />
     <meta charset="UTF-8">
     <title>Arquivos</title>
 </head>
 <body>
+
     {% if all_files %}
     <h1>Arquivos :</h1>
     <ul>

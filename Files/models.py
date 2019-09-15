@@ -5,6 +5,7 @@ from django.db import models
 class File(models.Model):
     name = models.CharField(max_length=250)
     type = models.CharField(max_length=3)
+    archive = models.FileField()
 
     def __str__(self):
-        return self.name + " " + self.type
+        return self.name + " " + self.type + " " + self.archive
