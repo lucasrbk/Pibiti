@@ -5,6 +5,6 @@ from . import views
 app_name = 'files'
 
 urlpatterns = [
-    path('admin', views.detail, name='detail'),
-    path('file', views.index, name='index'),
+    #path('admin', views.detail, name='default'),
+    path('files', views.index, name='index'),
 ]

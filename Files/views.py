@@ -7,10 +7,10 @@ from django.shortcuts import render
 
 def index(request):
     all_files = File.objects.all()
-    context  ={
+    context = {
         'all_files': all_files,
     }
-    return render(request, 'files/index.html',context)
+    return render(request, 'files/index.html', context)
 
 
 def detail(request):

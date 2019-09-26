@@ -3,15 +3,20 @@
 <head>
     {% load staticfiles %}
     <link rel="stylesheet" type="text/css" href="{% static 'files/style.css' %}" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <meta charset="UTF-8">
     <title>Arquivos</title>
 </head>
 <body>
-
-    {% if all_files %}
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="navbar-header">
+            <a class="navbar-brand " href="{% url 'files:index' %}">Simple Machine Learner</a>
+        </div>
+    </nav>
+    {% if File_file %}
     <h1>Arquivos :</h1>
     <ul>
-        {% for file in all_files %}
+        {% for file in File_file %}
         <li><a href="/file/{{file.type}}/">{{file.name}}</a> </li>
         {% endfor %}
     </ul>
