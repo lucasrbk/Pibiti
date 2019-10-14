@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     {% load staticfiles %}
-    <link rel="stylesheet" type="text/css" href="{% static 'files/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'Files/style.css' %}" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <meta charset="UTF-8">
     <title>Arquivos</title>
@@ -13,6 +13,7 @@
             <a class="navbar-brand " href="{% url 'files:index' %}">Simple Machine Learner</a>
         </div>
     </nav>
+    <h2>Arquivos já treinados</h2>
     {% if File_file %}
     <h1>Arquivos :</h1>
     <ul>
@@ -23,5 +24,29 @@
     {% else %}
             <h2>No files to show</h2>
     {% endif %}
+
+<div class="form-check">
+    <h2>Escolha um dos algoritmos</h2>
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+  <label class="form-check-label" for="exampleRadios1">
+        KNN
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+  <label class="form-check-label" for="exampleRadios2">
+        SVM
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+  <label class="form-check-label" for="exampleRadios3">
+        Lasso
+  </label>
+</div>
+
+<button type="button" class="btn btn-primary btn-lg">Treinar</button>
+
+<img src="..Pibiti\prints\Scatter-plot-of-Moons-Test-Classification-Problem.png" class="img-fluid" alt="Responsive image">
 </body>
 </html>

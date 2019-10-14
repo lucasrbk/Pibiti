@@ -2,3 +2,7 @@
 body{
     background-color: blue;
 }
+
+.form-check{
+    left: 15px;
+}
