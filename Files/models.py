@@ -8,4 +8,4 @@ class File(models.Model):
     archive = models.FileField()
 
     def __str__(self):
-        return self.name + " " + self.type + " " + self.archive
+        return self.name + " " + self.type + " " + str(self.archive)
