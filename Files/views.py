@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import File
 from django.shortcuts import render
-
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 def index(request):
     all_files = File.objects.all()
@@ -18,3 +18,7 @@ def detail(request):
     all_files = File.objects.all()
 
     return HttpResponse('html')
+
+class FileAdd(CreateView):
+    model = File
+    fields = ['name', 'type']

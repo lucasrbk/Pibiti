@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     {% load staticfiles %}
-    <link rel="stylesheet" type="text/css" href="{% static 'Files/style.css' %}" />
+    <!--<link rel="stylesheet" type="text/css" href="{% static 'Files/style.css' %}" />-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <meta charset="UTF-8">
     <title>Arquivos</title>
@@ -12,6 +12,12 @@
         <div class="navbar-header">
             <a class="navbar-brand " href="{% url 'files:index' %}">Simple Machine Learner</a>
         </div>
+        <div>
+            <a HREF="{% url 'files:add_file' %}">
+                <span class="glyphicon glyphicon-file" aria-hidden="false">Adicionar arquivo</span>
+            </a>
+
+        </div>
     </nav>
     <h2>Arquivos já treinados</h2>
 
@@ -19,7 +25,7 @@
     <h1>Arquivos :</h1>
     <ul>
         {% for file in all_files %}
-        <li><a href="/file/{{file.type}}/">{{file.name}}</a> </li>
+        <li><a href="/file/{{file.name}}/">{{file.name}}</a> </li>
         {% endfor %}
     </ul>
     {% else %}
@@ -48,6 +54,6 @@
 
 <button type="button" class="btn btn-primary btn-lg">Treinar</button>
 
-<img src="..Pibiti\prints\Scatter-plot-of-Moons-Test-Classification-Problem.png" class="img-fluid" alt="Responsive image">
+<img src="...Pibiti/prints/Scatter-plot-of-Moons-Test-Classification-Problem.png" class="img-fluid" alt="Responsive image">
 </body>
 </html>
