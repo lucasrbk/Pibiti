@@ -2,7 +2,16 @@
 <html lang="en">
 <head>
     {% load staticfiles %}
-    <!--<link rel="stylesheet" type="text/css" href="{% static 'Files/style.css' %}" />-->
+    <!--<link rel="stylesheet" type="text/css" href="{% static 'Files/style.css' %}" />
+        import pandas as pd
+
+    import sklearn
+    from sklearn import linear model
+    -->
+    import pandas as pd
+    import numpy as np
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src=""></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <meta charset="UTF-8">
     <title>Arquivos</title>
@@ -10,28 +19,31 @@
 <body>
     <nav class="navbar navbar-dark bg-dark">
         <div class="navbar-header">
-            <a class="navbar-brand " href="{% url 'files:index' %}">Simple Machine Learner</a>
+            <a class="navbar-brand " href="{% url 'files:index' %}">File analyzer</a>
         </div>
         <div>
             <a HREF="{% url 'files:add_file' %}">
-                <span class="glyphicon glyphicon-file" aria-hidden="false">Adicionar arquivo</span>
+
             </a>
 
         </div>
     </nav>
-    <h2>Arquivos já treinados</h2>
-
     {% if all_files %}
-    <h1>Arquivos :</h1>
+    <h2>Arquivos :</h2>
     <ul>
         {% for file in all_files %}
         <li><a href="/file/{{file.name}}/">{{file.name}}</a> </li>
         {% endfor %}
     </ul>
     {% else %}
-            <h2>No files to show</h2>
+            <!-- <h2>No files to show</h2> -->
     {% endif %}
+    <div>
+        <form>
+            <input type="file" name="myFile"><br><br>
+        </form>
 
+    </div>
 <div class="form-check">
     <h2>Escolha um dos algoritmos</h2>
   <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
@@ -54,6 +66,6 @@
 
 <button type="button" class="btn btn-primary btn-lg">Treinar</button>
 
-<img src="...Pibiti/prints/Scatter-plot-of-Moons-Test-Classification-Problem.png" class="img-fluid" alt="Responsive image">
+
 </body>
 </html>
