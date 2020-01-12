@@ -27,6 +27,7 @@ model.fit(x_train, y_train)
 score = model.score(x_test, y_test)
 
 print(score)
+print('Coeficiente: \n', model.n_neighbors)
 
 p = "critical_temp"
 
