@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% load staticfiles %}
+    {% load static %}
     <!--<link rel="stylesheet" type="text/css" href="{% static 'Files/style.css' %}" />
-        import pandas as pd
-
-    import sklearn
-    from sklearn import linear model
     -->
-    import pandas as pd
-    import numpy as np
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src=""></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -39,9 +34,6 @@
             <!-- <h2>No files to show</h2> -->
     {% endif %}
     <div>
-        <form>
-            <input type="file" name="myFile"><br><br>
-        </form>
 
     </div>
 <div class="form-check">
@@ -63,8 +55,11 @@
         Linear
   </label>
 </div>
+    <form action="" method="post" enctype="multipart/form-data">
+            <input type="file" name="myFile" required><br><br>
+            <input type="submit">Treinar<br><br>
+        </form>
 
-<button type="button" class="btn btn-primary btn-lg">Treinar</button>
 
 
 </body>
